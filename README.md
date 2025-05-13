@@ -45,6 +45,7 @@ AI StudyHub is a powerful AI-driven study assistant platform that enables studen
 git clone https://github.com/Chetan309/AI-StudyHub.git
 cd AI-StudyHub
 npm install
+```
 
 ## Contact
 
