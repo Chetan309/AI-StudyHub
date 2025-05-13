@@ -1,11 +1,7 @@
 import { NextResponse } from "next/server";
-import Stripe from "stripe";
 import { PayPalButtons } from "@paypal/react-paypal-js";
-
 export async function POST(req) {
   console.log("POST /api/payment/checkout reached");
-  const paypal = new paypal(process.env.PAYPAL_SECRET_KEY);
-  console.log("Stripe secret key:", process.env.PAYPAL_SECRET_KEY);
   const { priceId } = await req.json();
   const session = await PayPalButtons.checkout.sessions.create({
     mode: "subscription",
